@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol - Kyrosil Kampanyası</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
 
+    <header>
+        <h1>Kampanyaya Kayıt Olun</h1>
+        <p>Mama paketini almaya hak kazanmak için ilk adımı atın.</p>
+    </header>
+
+    <main>
+        <h2>Katılım Bilgileriniz</h2>
+        <form action="/kayit-noktasi" method="post">
+            <div>
+                <label for="adsoyad">Adınız Soyadınız:</label><br>
+                <input type="text" id="adsoyad" name="adsoyad" required placeholder="Adınızı ve soyadınızı yazın...">
+            </div>
+            <br>
+            <div>
+                <label for="kart_gsm">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
+                <input type="text" id="kart_gsm" name="kart_gsm" required placeholder="Kart numaranızı veya kayıtlı GSM numaranızı girin...">
+            </div>
+            <br>
+            <div>
+                <button type="submit">Kaydı Tamamla</button>
+                </div>
+
+        </form>
+        <br>
+        <a href="index.html">Anasayfaya Dön</a>
+    </main>
+
+    <footer>
+        <p>© 2025 Kyrosil Kampanyası</p>
+    </footer>
+
+</body>
+</html>
