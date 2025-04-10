@@ -16,16 +16,16 @@
         <h2>Hediyeniz İçin Fotoğrafınızı Yükleyin</h2>
         <p>Kampanyaya kayıt olurken kullandığınız CarrefourSA Kart Numaranızı veya GSM Numaranızı girin ve sokaktaki dostlarımızı beslerken çektiğiniz fotoğrafı yükleyin.</p>
         
-        <form action="/yukle-noktasi" method="post" enctype="multipart/form-data">
+        <form action="https://formspree.io/f/xqapwwvk" method="post" enctype="multipart/form-data">
             <div>
                 <label for="kart_gsm_yukle">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
                 <input type="text" id="kart_gsm_yukle" name="kart_gsm_yukle" required placeholder="Kaydolurken kullandığınız numarayı girin...">
-                </div>
+            </div>
             <br>
             <div>
                 <label for="fotograf_yukle">İyiliği Belgeleyen Fotoğrafınız:</label><br>
                 <input type="file" id="fotograf_yukle" name="fotograf_yukle" accept="image/*" required>
-                 </div>
+            </div>
             <br>
             <div>
                 <button type="submit">Fotoğrafı Yükle ve Hediyeyi Al</button>
