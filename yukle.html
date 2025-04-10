@@ -9,12 +9,29 @@
 
     <header>
         <h1>Fotoğraf Yükleme</h1>
+        <p>Bu güzel iyiliğinizi belgeleyerek hediyenizi alın!</p>
     </header>
 
     <main>
-        <h2>Hediyenizi Almak İçin Fotoğrafınızı Yükleyin</h2>
-        <p>Bu sayfadan, sokaktaki dostlarımızı mamalarla buluşturduğunuz anın fotoğrafını yükleyerek CarrefourSA'da geçerli 300 TL hediye para kazanabilirsiniz.</p>
-        <p><strong>Bu bölüm yakında aktif olacaktır.</strong></p>
+        <h2>Hediyeniz İçin Fotoğrafınızı Yükleyin</h2>
+        <p>Kampanyaya kayıt olurken kullandığınız CarrefourSA Kart Numaranızı veya GSM Numaranızı girin ve sokaktaki dostlarımızı beslerken çektiğiniz fotoğrafı yükleyin.</p>
+        
+        <form action="/yukle-noktasi" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="kart_gsm_yukle">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
+                <input type="text" id="kart_gsm_yukle" name="kart_gsm_yukle" required placeholder="Kaydolurken kullandığınız numarayı girin...">
+                </div>
+            <br>
+            <div>
+                <label for="fotograf_yukle">İyiliği Belgeleyen Fotoğrafınız:</label><br>
+                <input type="file" id="fotograf_yukle" name="fotograf_yukle" accept="image/*" required>
+                 </div>
+            <br>
+            <div>
+                <button type="submit">Fotoğrafı Yükle ve Hediyeyi Al</button>
+            </div>
+
+        </form>
         <br>
         <a href="index.html">Anasayfaya Dön</a>
     </main>
