@@ -1,1 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyrosil Mama Kampanyası Kayıt</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
 
+    <header>
+        <h1>Kyrosil ile Bir Kap Sevgi Paylaşın</h1>
+        <p>Sokaktaki dostlarımıza bir kap mama, bir gün daha yaşama umudu verin. Kampanyamıza katılın, iyiliği birlikte büyütelim!</p>
+    </header>
+
+    <main>
+        <h2>Kampanyaya Katılım Formu</h2>
+        <form action="/kayit-noktasi" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="adsoyad">Adınız Soyadınız:</label><br>
+                <input type="text" id="adsoyad" name="adsoyad" required placeholder="Adınızı ve soyadınızı yazın...">
+            </div>
+            <br>
+            <div>
+                <label for="kart_gsm">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
+                <input type="text" id="kart_gsm" name="kart_gsm" required placeholder="Kart numaranızı veya kayıtlı GSM numaranızı girin...">
+            </div>
+            <br>
+            <div>
+                <label for="fotograf">İyiliği Belgeleyen Fotoğrafınız:</label><br>
+                <p style="font-size: 0.8em; color: #555;">(Sokaktaki dostlarımızı beslerken çektiğiniz bir fotoğrafı yükleyerek 300 TL hediye para kazanabilirsiniz)</p>
+                <input type="file" id="fotograf" name="fotograf" accept="image/*" required>
+                </div>
+            <br>
+            <div>
+                <button type="submit">Kaydı Tamamla ve Fotoğrafı Yükle</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Kyrosil Kampanyası - Nestle, CarrefourSA, Purina İşbirliğiyle</p>
+    </footer>
+
+    </body>
+</html>
