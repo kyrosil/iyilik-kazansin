@@ -56,19 +56,19 @@ main { padding: 40px 20px; max-width: 900px; margin: 40px auto; }
 main h2 { font-family: var(--heading-font); text-align: center; color: #333; margin-bottom: 20px; font-weight: 500; font-size: 1.9em; }
 .section-description { text-align: center; max-width: 700px; margin: 0 auto 40px auto; font-size: 1.1em; color: var(--dark-grey); }
 
-/* Giriş Hikayesi Stili */
+/* Giriş Hikayesi Stili (Güncellenmiş - Daha Kompakt) */
 .intro-story {
-    font-size: 1.18em; 
-    line-height: 1.8;
+    font-size: 1.1em; /* Küçülttük */
+    line-height: 1.7; /* Azalttık */
     color: var(--dark-grey); 
-    max-width: 780px; 
-    margin: 0 auto 50px auto; /* Header sonrası boşluk */
+    max-width: 750px; 
+    margin: 0 auto 40px auto; /* Alt boşluğu azalttık */
     text-align: center;
     font-style: italic; 
     opacity: 0; 
-    animation: fadeInStory 1.8s 0.5s ease-out forwards; /* Farklı animasyon adı */
+    animation: fadeInStory 1.5s 0.5s ease-out forwards; 
 }
-/* Giriş Hikayesi için FadeIn */
+/* Giriş Hikayesi için FadeIn Animasyonu */
 @keyframes fadeInStory { 
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -125,7 +125,7 @@ form button:hover { background-color: #d16a2b; transform: translateY(-2px); }
 .back-link:hover { text-decoration: underline; color: #d16a2b; }
 
 /* Kampanya Görseli */
-.campaign-image { max-width: 80%; height: auto; border-radius: var(--border-radius-md); margin: 0 auto; /* Üst boşluk intro-story'den, alt boşluk scroll-down'dan */ display: block; box-shadow: var(--shadow-large); border: 6px solid var(--white-color); transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.campaign-image { max-width: 80%; height: auto; border-radius: var(--border-radius-md); margin: 0 auto; display: block; box-shadow: var(--shadow-large); border: 6px solid var(--white-color); transition: transform 0.4s ease, box-shadow 0.4s ease; }
 .campaign-image:hover { transform: scale(1.03); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
 
 /* Manuel Sayaç Alanı */
@@ -136,7 +136,7 @@ form button:hover { background-color: #d16a2b; transform: translateY(-2px); }
 @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
 
 /* Aşağı Kaydır İşaretçisi Stilleri */
-.scroll-down { text-align: center; margin-top: 30px; /* Resimden sonra boşluk */ margin-bottom: 50px; position: relative; z-index: 5; animation: fadeInScroll 1.5s 1s ease-out forwards; opacity: 0; cursor: default; }
+.scroll-down { text-align: center; margin-top: 30px; margin-bottom: 50px; position: relative; z-index: 5; animation: fadeInScroll 1.5s 1s ease-out forwards; opacity: 0; cursor: default; }
 .scroll-down span { font-size: 0.75em; color: var(--dark-grey); display: block; margin-bottom: 2px; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; }
 .scroll-down .arrow { font-size: 2.8em; color: var(--primary-color); line-height: 1; animation: bounce 2.5s infinite ease-in-out; }
 
@@ -159,13 +159,18 @@ footer { text-align: center; margin-top: 60px; padding: 30px 20px; font-size: 0.
     header h1 { font-size: 1.9em; }
     main h2 { font-size: 1.6em; }
     .section-description { font-size: 1em; }
-    .intro-story { font-size: 1.05em; margin-bottom: 40px; }
+    /* Mobil için Giriş Hikayesi Stili */
+    .intro-story {
+        font-size: 1em; /* Mobilde daha da küçülttük */
+        line-height: 1.65; /* Mobilde satır aralığı daha az */
+        margin-bottom: 30px; /* Mobilde alt boşluk daha az */
+    }
     .steps-list li { padding-left: 50px; font-size: 1em; }
     .steps-list li::before { width: 35px; height: 35px; line-height: 35px; font-size: 1.1em; }
     main { padding: 25px 15px; margin: 25px auto; }
     form { padding: 25px 20px; }
     button, .buton-anasayfa { font-size: 1em; padding: 12px 25px; }
-    .campaign-image { max-width: 95%; margin: 0 auto 40px auto; }
+    .campaign-image { max-width: 95%; margin: 0 auto 40px auto; } /* Alt boşluk tekrar ayarlandı */
     .aksiyon-butonlari { flex-direction: column; align-items: center; } 
     .partner-logos { gap: 20px; } 
     .partner-logos img { height: 30px !important; } 
