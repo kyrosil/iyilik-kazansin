@@ -8,11 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css"> 
-    <style>
-        #success-message { display: none; padding: 25px; background-color: var(--tertiary-color); color: #27632a; border: 1px solid #a3cca3; border-radius: var(--border-radius-md); text-align: center; margin-top: 30px; font-size: 1.1em; box-shadow: var(--shadow-light); }
-        #success-message strong { font-family: var(--heading-font); font-weight: 700; }
-    </style>
-</head>
+    </head>
 <body>
 
     <header>
@@ -24,17 +20,26 @@
         <h2>Hediyeniz İçin Fotoğrafınızı Yükleyin</h2>
          <p class="section-description">Minik bir dosta uzattığınız yardım elinin o sıcacık fotoğrafı, hem size teşekkürümüzü sunmamızı sağlayacak hem de daha fazla insana ilham kaynağı olacak.</p>
         
+         <div class="form-benefit-info gift-info">
+             <p><strong><span class="icon">⭐</span> Kazanılacak Hediye:</strong> Bu sayfadan yükleyeceğiniz fotoğraf onaylandıktan sonra, CarrefourSA kartınıza <strong>Nestle ürünlerinde geçerli 300 TL değerinde Puan</strong> yüklenecektir. (Bilgilendirme SMS ile yapılacaktır).</p>
+         </div>
+
         <form id="upload-form" method="post" enctype="multipart/form-data"> 
             <div>
                 <label for="kart_gsm_yukle">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
                 <input type="text" id="kart_gsm_yukle" name="kart_gsm_yukle" required placeholder="Kaydolurken kullandığınız numarayı girin...">
             </div>
-            <br>
+            
             <div>
                 <label for="fotograf_yukle">İyiliği Belgeleyen Fotoğrafınız:</label><br>
                 <input type="file" id="fotograf_yukle" name="fotograf_yukle" accept="image/*" required> 
             </div>
-            <br>
+
+            <div>
+                <label for="social_username_yukle">Instagram veya EU Portal Kullanıcı Adınız (İsteğe Bağlı):</label><br> 
+                <input type="text" id="social_username_yukle" name="social_username_yukle" placeholder="Varsa @kullaniciadi veya EU Portal adınızı girin...">
+            </div>
+            
             <div>
                 <button type="submit">Fotoğrafı Yükle ve Hediyeyi Al</button>
             </div>
