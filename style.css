@@ -1,80 +1,231 @@
-/* Anasayfa Ana İçerik Alanı */
-.anasayfa-main {
-    text-align: center; /* Anasayfa içeriğini ortala */
+/* Google Fonts Eklemeyi Unutmayın! (HTML <head> içine) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@500;700&display=swap');
+
+/* Genel Sayfa Stilleri */
+body {
+    font-family: 'Nunito Sans', sans-serif; /* Ana font */
+    line-height: 1.7; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #fdf8f0; /* Çok açık sıcak bej */
+    color: #5d5d5d; /* Koyu gri metin */
+    font-size: 16px;
 }
 
-/* Anasayfadaki Aksiyon Kutuları */
+/* Başlık Alanı Stilleri */
+header {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee; /* Çok ince çizgi */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif; /* Başlık fontu */
+    color: #e87a3d; /* Yumuşak portakal/terracotta */
+    margin: 0 0 5px 0;
+    font-weight: 700; /* Kalın başlık */
+}
+
+header p {
+    color: #777;
+    font-size: 0.95em;
+    margin: 0;
+}
+
+/* Ana İçerik Alanı Stilleri */
+main {
+    padding: 30px 20px;
+    max-width: 800px; /* İçeriği biraz daha genişletelim */
+    margin: 30px auto; 
+}
+
+main h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #333; /* Ana içerik başlığı daha koyu */
+    margin-bottom: 30px;
+    font-weight: 500; /* Orta kalınlıkta */
+}
+
+/* Form Alanları Genel Stil */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px; /* Daha yuvarlak köşeler */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+    max-width: 600px; /* Formu ana içerikten biraz daha dar yap */
+    margin: 20px auto; /* Formu ortala */
+}
+
+form div {
+    margin-bottom: 20px; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: 700; /* Kalın etiket */
+    color: #444;
+    font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    width: 100%; 
+    padding: 12px 15px; /* Daha rahat padding */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Daha yuvarlak */
+    box-sizing: border-box; 
+    font-size: 1em;
+    font-family: 'Nunito Sans', sans-serif; /* Form elemanları da aynı font */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Yumuşak geçiş */
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #e87a3d; /* Odaklanınca kenarlık rengi */
+    box-shadow: 0 0 0 3px rgba(232, 122, 61, 0.15); /* Odaklanınca hafif dış gölge */
+    outline: none; /* Tarayıcı varsayılanını kaldır */
+}
+
+input[type="file"] {
+    padding: 8px 10px; 
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #e87a3d; 
+    color: white;
+    font-weight: 700; /* Kalın buton yazısı */
+    border: none;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Geçiş */
+    padding: 14px 20px; /* Daha dolgun buton */
+    font-size: 1.05em;
+}
+
+button:hover {
+    background-color: #d16a2b; /* Hover rengi */
+    transform: translateY(-2px); /* Hafif yukarı kalkma efekti */
+}
+
+/* Anasayfa Özel Stilleri */
+.anasayfa-main {
+    text-align: center; 
+}
+
 .aksiyon-kutulari {
-    display: flex; /* Kutuları yan yana dizmek için */
-    flex-wrap: wrap; /* Ekran küçülünce alt alta geçsin */
-    justify-content: space-around; /* Kutular arası boşluk bırak */
-    margin-top: 30px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    margin-top: 40px;
+    gap: 25px; /* Kutular arası boşluk */
 }
 
 .kutu {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 25px;
-    margin: 15px;
-    width: 40%; /* Geniş ekranlarda yaklaşık %40 genişlik */
-    min-width: 280px; /* Minimum genişlik */
-    background-color: #f9f9f9;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    text-align: left; /* Kutu içindeki metin sola dayalı */
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px;
+    width: calc(50% - 45px); /* Yan yana 2 kutu için */
+    min-width: 280px; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center; /* Kutu içeriği ortalı */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kutu:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .kutu h3 {
+    font-family: 'Poppins', sans-serif;
     margin-top: 0;
-    color: #8c5e2a; /* Başlık rengi */
-    text-align: center; /* Kutu başlıkları ortalı */
+    color: #333; 
+    margin-bottom: 15px;
 }
 
 .kutu p {
-    color: #555;
-    min-height: 60px; /* Kutu içeriklerinin benzer yükseklikte durması için */
+    color: #5d5d5d;
+    min-height: auto; /* Yüksekliği içeriğe bırakalım */
+    font-size: 0.95em;
+    margin-bottom: 25px;
 }
 
-/* Anasayfa Buton Stili */
 .buton-anasayfa {
-    display: block; /* Butonun tüm satırı kaplaması için */
-    background-color: #f58a2f; /* Ana buton rengi */
-    color: white;
-    padding: 12px 20px;
+    display: inline-block; /* Buton genişliği içeriğe göre */
+    background-color: #e87a3d; 
+    color: white !important; /* Link rengini ez */
+    padding: 12px 30px;
     text-align: center;
-    text-decoration: none; /* Link alt çizgisini kaldır */
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    text-decoration: none; 
+    border-radius: 8px;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .buton-anasayfa:hover {
-    background-color: #d1701b; /* Üzerine gelince renk değişimi */
-    color: white;
-}
-
-/* Farklı kutular için hafif renk tonlaması (isteğe bağlı) */
-#kutu-kayit {
-    border-left: 5px solid #f58a2f; /* Kayıt kutusuna sol kenarlık */
-}
-
-#kutu-yukle {
-    border-left: 5px solid #5a8c2a; /* Yükleme kutusuna farklı renk kenarlık */
+    background-color: #d16a2b; 
+    color: white !important;
+    transform: translateY(-2px);
 }
 
 #kutu-yukle .buton-anasayfa {
-     background-color: #5a8c2a; /* Yükleme butonu farklı renk */
+     background-color: #a0c8d8; /* Yükleme butonu yumuşak mavi */
 }
 
 #kutu-yukle .buton-anasayfa:hover {
-     background-color: #487021; /* Yükleme butonu hover rengi */
+     background-color: #82b2c4; /* Yükleme butonu hover rengi */
+}
+
+/* Sayfalardaki Anasayfaya Dön Linki */
+main > a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #e87a3d;
+    text-decoration: none;
+    font-weight: 700;
+}
+main > a:hover {
+    text-decoration: underline;
+}
+
+/* Eklenecek Kampanya Görseli İçin Örnek Stil */
+.campaign-image {
+    max-width: 100%; /* Genişliği konteynıra sığdır */
+    height: auto; /* Oranı koru */
+    border-radius: 12px; /* Yuvarlak köşeler */
+    margin: 30px auto; /* Ortalama ve boşluk */
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 
-/* Mobil cihazlar için kutu düzenlemesi */
+/* Alt Bilgi Stilleri */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+    border-top: 1px solid #eee;
+}
+
+/* Mobil Uyum İçin Basit Ayarlar */
 @media (max-width: 768px) {
     .kutu {
-        width: 80%; /* Daha küçük ekranlarda kutu genişliği */
-        margin: 15px auto; /* Ortalamak için */
+        width: calc(100% - 60px); /* Tek sütun */
+    }
+     main {
+        padding: 20px 15px;
+    }
+    form {
+        padding: 20px;
     }
 }
