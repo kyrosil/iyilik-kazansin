@@ -3,45 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyrosil Mama Kampanyası Kayıt</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+    <title>Kyrosil Mama Kampanyası</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
 
     <header>
-        <h1>Kyrosil ile Bir Kap Sevgi Paylaşın</h1>
-        <p>Sokaktaki dostlarımıza bir kap mama, bir gün daha yaşama umudu verin. Kampanyamıza katılın, iyiliği birlikte büyütelim!</p>
+        <h1>Kyrosil ile Sokaktaki Dostlarımıza Umut Olun!</h1>
+        <p>Nestle, CarrefourSA ve Purina işbirliğiyle; bir kap mama, bir cana çok şey katar...</p>
     </header>
 
-    <main>
-        <h2>Kampanyaya Katılım Formu</h2>
-        <form action="/kayit-noktasi" method="post" enctype="multipart/form-data">
-            <div>
-                <label for="adsoyad">Adınız Soyadınız:</label><br>
-                <input type="text" id="adsoyad" name="adsoyad" required placeholder="Adınızı ve soyadınızı yazın...">
-            </div>
-            <br>
-            <div>
-                <label for="kart_gsm">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
-                <input type="text" id="kart_gsm" name="kart_gsm" required placeholder="Kart numaranızı veya kayıtlı GSM numaranızı girin...">
-            </div>
-            <br>
-            <div>
-                <label for="fotograf">İyiliği Belgeleyen Fotoğrafınız:</label><br>
-                <p style="font-size: 0.8em; color: #555;">(Sokaktaki dostlarımızı beslerken çektiğiniz bir fotoğrafı yükleyerek 300 TL hediye para kazanabilirsiniz)</p>
-                <input type="file" id="fotograf" name="fotograf" accept="image/*" required>
-                </div>
-            <br>
-            <div>
-                <button type="submit">Kaydı Tamamla ve Fotoğrafı Yükle</button>
+    <main class="anasayfa-main">
+        <h2>Kampanyamız Hakkında</h2>
+        <p>CarrefourSA'dan Nestle'nin Purina mamalarını alın, sokaktaki dostlarımızla paylaşın. Bu güzel iyiliğinizi belgeleyen bir fotoğraf yükleyerek CarrefourSA'da geçerli 300 TL hediye para kazanın!</p>
+
+        <div class="aksiyon-kutulari">
+            <div class="kutu" id="kutu-kayit">
+                <h3>Adım 1: Kampanyaya Katılın</h3>
+                <p>Ücretsiz mama paketini almaya hak kazanmak ve kampanyaya dahil olmak için bilgilerinizi kaydedin.</p>
+                <a href="kayit.html" class="buton-anasayfa">Kayıt Ol & Mama Paketini Almaya Hak Kazan</a>
             </div>
 
-        </form>
+            <div class="kutu" id="kutu-yukle">
+                <h3>Adım 2: Hediyenizi Alın</h3>
+                <p>Mamayı paylaştınız mı? Harika! Şimdi o anın fotoğrafını yükleyerek 300 TL değerindeki hediyenizi alın.</p>
+                <a href="yukle.html" class="buton-anasayfa">Fotoğraf Yükle & Hediyeni Al</a>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>© 2025 Kyrosil Kampanyası - Nestle, CarrefourSA, Purina İşbirliğiyle</p>
     </footer>
 
-    </body>
+</body>
 </html>
