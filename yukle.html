@@ -4,37 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotoğraf Yükleme - Kyrosil Kampanyası</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css"> 
     <style>
-        #success-message {
-            display: none; 
-            padding: 20px;
-            background-color: #d1e7dd; /* Biraz daha yumuşak yeşil */
-            color: #0f5132; 
-            border: 1px solid #badbcc;
-            border-radius: 8px; /* Stile uygun */
-            text-align: center;
-            margin-top: 25px;
-            font-size: 1.05em; /* Biraz daha büyük mesaj */
-        }
-         #success-message strong {
-            font-family: 'Poppins', sans-serif;
-         }
+        #success-message { display: none; padding: 25px; background-color: var(--tertiary-color); color: #27632a; border: 1px solid #a3cca3; border-radius: var(--border-radius-md); text-align: center; margin-top: 30px; font-size: 1.1em; box-shadow: var(--shadow-light); }
+        #success-message strong { font-family: var(--heading-font); font-weight: 700; }
     </style>
 </head>
 <body>
 
     <header>
-         <h1>O Güzel Anı Bizimle Paylaşın!</h1>
+        <h1>O Güzel Anı Bizimle Paylaşın!</h1>
         <p>Yaptığınız iyilik hem hediyeye dönüşsün hem de başkalarına ilham versin!</p>
     </header>
 
     <main>
         <h2>Hediyeniz İçin Fotoğrafınızı Yükleyin</h2>
-         <p style="text-align: center; max-width: 500px; margin: -15px auto 30px auto;">Minik bir dosta uzattığınız yardım elinin o sıcacık fotoğrafı, hem size teşekkürümüzü sunmamızı sağlayacak hem de daha fazla insana ilham kaynağı olacak.</p>
+         <p class="section-description">Minik bir dosta uzattığınız yardım elinin o sıcacık fotoğrafı, hem size teşekkürümüzü sunmamızı sağlayacak hem de daha fazla insana ilham kaynağı olacak.</p>
         
         <form id="upload-form" method="post" enctype="multipart/form-data"> 
             <div>
@@ -58,22 +46,24 @@
         </div>
         
         <br>
-        <a href="index.html">Anasayfaya Dön</a>
+        <a href="index.html" class="back-link">Anasayfaya Dön</a>
     </main>
 
     <footer>
+         <div class="partner-logos">
+             <p>İş Birlikleriyle:</p>
+            <img src="images/logo-kyrosil.png" alt="Kyrosil Logosu" height="40"> 
+            <img src="images/logo-nestle.png" alt="Nestle Logosu" height="40">
+            <img src="images/logo-purina.png" alt="Purina Logosu" height="40">
+            <img src="images/logo-carrefoursa.png" alt="CarrefourSA Logosu" height="35"> 
+        </div>
         <p>© 2025 Kyrosil Kampanyası</p>
     </footer>
 
     <script>
         const form = document.getElementById('upload-form');
         const successMessage = document.getElementById('success-message');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); 
-            successMessage.style.display = 'block';
-            form.style.display = 'none'; 
-        });
+        form.addEventListener('submit', function(event) { event.preventDefault(); successMessage.style.display = 'block'; form.style.display = 'none'; });
     </script>
 
 </body>
