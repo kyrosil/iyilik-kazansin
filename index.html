@@ -18,40 +18,48 @@
 
     <main class="anasayfa-main">
         
-        <img src="images/placeholder-image.jpg" alt="Kampanya görseli - sevimli kedi ve köpek" class="campaign-image"> 
+        <img src="images/placeholder-image.jpg" alt="Kampanya görseli - sevgi gören bir sokak hayvanı" class="campaign-image"> 
+        
+        <div class="counter-section">
+            <p>Sizin Gibi İyilikseverler Sayesinde Bugüne Kadar <strong id="manual-counter">0</strong> Cana Dokunduk!</p> 
+            </div>
 
         <h2>Nasıl Katılırım? Bu İyilik Nasıl Büyür?</h2>
-        <p style="text-align: center; max-width: 700px; margin: -15px auto 30px auto; font-size: 1.05em;">
+        <p class="section-description">
             Sokaklarda yaşayan minik dostlarımız için bir araya geldik! Bu basit adımlarla hem onların karınlarını doyurun hem de bu güzel davranışınızın karşılığını alın:
         </p>
-        <ol style="text-align: left; max-width: 600px; margin: 0 auto 40px auto; padding-left: 0; list-style: none; counter-reset: step-counter;">
-            <li style="margin-bottom: 20px; position: relative; padding-left: 50px; min-height: 30px; display: flex; align-items: center;">
-                <strong style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #e87a3d; color: white; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; font-family: 'Poppins', sans-serif; font-size: 1.1em; transition: transform 0.3s ease;">1</strong>
-                <span>CarrefourSA Kart Numaranız veya kayıtlı GSM Numaranız ile <a href="kayit.html" style="color:#e87a3d; font-weight: 700;"><strong>gerekli bilgileri vererek</strong></a> kampanyaya ilk adımınızı atın ve mama paketini almaya hak kazanın. (Bilgilendirme SMS ile yapılacaktır).</span>
-            </li>
-            <li style="margin-bottom: 20px; position: relative; padding-left: 50px; min-height: 30px; display: flex; align-items: center;">
-                <strong style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #e87a3d; color: white; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; font-family: 'Poppins', sans-serif; font-size: 1.1em; transition: transform 0.3s ease;">2</strong>
-                <span>Size ulaşan/tanımlanan Purina mamaları ile <strong>sokaktaki bir canı besleyin</strong>. O anın sıcaklığını hissedin!</span>
-            </li>
-            <li style="margin-bottom: 20px; position: relative; padding-left: 50px; min-height: 30px; display: flex; align-items: center;">
-                <strong style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #e87a3d; color: white; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; font-family: 'Poppins', sans-serif; font-size: 1.1em; transition: transform 0.3s ease;">3</strong>
-                <span>Bu değerli anın <strong>fotoğrafını</strong> <a href="yukle.html" style="color:#a0c8d8; font-weight: 700;"><strong>yükleme sayfamızdan</strong></a> bizimle paylaşın.</span>
-            </li>
-            <li style="position: relative; padding-left: 50px; min-height: 30px; display: flex; align-items: center;">
-                <strong style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); background-color: #e87a3d; color: white; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; font-family: 'Poppins', sans-serif; font-size: 1.1em; transition: transform 0.3s ease;">4</strong>
-                <span>Teşekkür olarak, CarrefourSA kartınıza <strong>Nestle ürünlerinde geçerli 300 TL değerinde Puan</strong> yüklensin ve size SMS ile bilgi verilsin!</span>
-            </li>
+        
+        <ol class="steps-list">
+            <li><span>CarrefourSA Kart Numaranız veya kayıtlı GSM Numaranız ile <a href="kayit.html"><strong>gerekli bilgileri vererek</strong></a> kampanyaya ilk adımınızı atın ve mama paketini almaya hak kazanın. (Bilgilendirme SMS ile yapılacaktır).</span></li>
+            <li><span>Size ulaşan/tanımlanan Purina mamaları ile <strong>sokaktaki bir canı besleyin</strong>. O anın sıcaklığını hissedin!</span></li>
+            <li><span>Bu değerli anın <strong>fotoğrafını</strong> <a href="yukle.html"><strong>yükleme sayfamızdan</strong></a> bizimle paylaşın.</span></li>
+            <li><span>Teşekkür olarak, CarrefourSA kartınıza <strong>Nestle ürünlerinde geçerli 300 TL değerinde Puan</strong> yüklensin ve size SMS ile bilgi verilsin!</span></li>
         </ol>
 
-        <div class="aksiyon-butonlari" style="margin-top: 40px;">
-             <a href="kayit.html" class="buton-anasayfa" style="margin: 5px; background-color: #e87a3d;">Hemen Kayıt Ol!</a>
-             <a href="yukle.html" class="buton-anasayfa" style="margin: 5px; background-color: #a0c8d8;">Fotoğraf Yükle!</a>
+        <div class="package-info">
+            <h3>Kampanya Paketi İçeriği:</h3>
+            <ul>
+                <li><span class="icon">🐾</span> Purina One Orta ve Büyük Irk Yetişkin Köpek Maması 2.5 kg</li>
+                <li><span class="icon">🐾</span> Purina One Sığır Etli Kuru Kedi Maması 800 g</li>
+            </ul>
+        </div>
+
+        <div class="aksiyon-butonlari">
+             <a href="kayit.html" class="buton-anasayfa btn-kayit">Hemen Kayıt Ol!</a>
+             <a href="yukle.html" class="buton-anasayfa btn-yukle">Fotoğraf Yükle!</a>
          </div>
 
     </main>
 
     <footer>
-        <p>© 2025 Kyrosil Kampanyası - Nestle, CarrefourSA, Purina İşbirliğiyle</p>
+        <div class="partner-logos">
+            <p>İş Birlikleriyle:</p>
+            <img src="images/logo-kyrosil.png" alt="Kyrosil Logosu" height="40"> 
+            <img src="images/logo-nestle.png" alt="Nestle Logosu" height="40">
+            <img src="images/logo-purina.png" alt="Purina Logosu" height="40">
+            <img src="images/logo-carrefoursa.png" alt="CarrefourSA Logosu" height="35"> 
+        </div>
+        <p>© 2025 Kyrosil Kampanyası</p>
     </footer>
 
 </body>
