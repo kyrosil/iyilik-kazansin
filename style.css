@@ -1,1 +1,104 @@
+/* Genel Sayfa Stilleri */
+body {
+    font-family: sans-serif; /* Okunabilir bir font ailesi */
+    line-height: 1.6; /* Satır aralığı */
+    margin: 0; /* Dış boşlukları sıfırla */
+    padding: 0; /* İç boşlukları sıfırla */
+    background-color: #fdfaf6; /* Hafif sıcak bir arka plan rengi */
+    color: #333; /* Genel metin rengi */
+}
 
+/* Header (Başlık Alanı) Stilleri */
+header {
+    background-color: #eaddc7; /* Biraz daha belirgin bir başlık arka planı */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #d4bfa2; /* Başlığı ayıran ince bir çizgi */
+}
+
+header h1 {
+    color: #8c5e2a; /* Başlık için daha koyu, sıcak bir renk */
+    margin-bottom: 5px;
+}
+
+/* Ana İçerik Alanı Stilleri */
+main {
+    padding: 20px;
+    max-width: 700px; /* İçeriği çok geniş ekranlarda daralt */
+    margin: 20px auto; /* Ortalamak için */
+    background-color: #ffffff; /* İçerik alanı için beyaz arka plan */
+    border-radius: 8px; /* Hafif yuvarlak köşeler */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* İnce bir gölge */
+}
+
+main h2 {
+    text-align: center;
+    color: #a07640; /* Ana içerik başlığı rengi */
+    margin-bottom: 25px;
+}
+
+/* Form Elemanları Stilleri */
+form div {
+    margin-bottom: 15px; /* Form elemanları arası boşluk */
+}
+
+label {
+    display: block; /* Etiketleri ayrı satırda göster */
+    margin-bottom: 5px;
+    font-weight: bold; /* Etiketleri biraz kalın yap */
+    color: #555;
+}
+
+input[type="text"],
+input[type="file"],
+button {
+    width: 100%; /* Genişliği kapsayıcıya yay */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil et */
+    font-size: 1em;
+}
+
+input[type="file"] {
+    padding: 5px; /* Dosya yükleme butonu için biraz daha az padding */
+}
+
+button {
+    background-color: #f58a2f; /* Turuncumsu, dikkat çekici bir buton rengi */
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer; /* Üzerine gelince el ikonu */
+    transition: background-color 0.3s ease; /* Yumuşak renk geçişi */
+}
+
+button:hover {
+    background-color: #d1701b; /* Buton üzerine gelince biraz koyulaşsın */
+}
+
+/* Fotoğraf yükleme alanı için ek açıklama stili */
+form p {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: -10px; /* Etikete biraz daha yakınlaştır */
+    margin-bottom: 10px;
+}
+
+/* Footer (Alt Bilgi) Stilleri */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    font-size: 0.8em;
+    color: #777;
+    border-top: 1px solid #eee;
+}
+
+/* Mobil cihazlar için basit düzenleme (isteğe bağlı) */
+@media (max-width: 600px) {
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+}
