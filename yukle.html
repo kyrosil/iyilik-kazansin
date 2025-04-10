@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotoğraf Yükleme - Kyrosil Kampanyası</title>
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+        #success-message {
+            display: none; 
+            padding: 20px;
+            background-color: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
 <body>
 
     <header>
@@ -14,9 +27,8 @@
 
     <main>
         <h2>Hediyeniz İçin Fotoğrafınızı Yükleyin</h2>
-        <p>Kampanyaya kayıt olurken kullandığınız CarrefourSA Kart Numaranızı veya GSM Numaranızı girin ve sokaktaki dostlarımızı beslerken çektiğiniz fotoğrafı yükleyin.</p>
         
-        <form action="https://formspree.io/f/xqapwwvk" method="post" enctype="multipart/form-data">
+        <form id="upload-form" method="post" enctype="multipart/form-data"> 
             <div>
                 <label for="kart_gsm_yukle">CarrefourSA Kart No veya Kayıtlı GSM No:</label><br>
                 <input type="text" id="kart_gsm_yukle" name="kart_gsm_yukle" required placeholder="Kaydolurken kullandığınız numarayı girin...">
@@ -24,14 +36,19 @@
             <br>
             <div>
                 <label for="fotograf_yukle">İyiliği Belgeleyen Fotoğrafınız:</label><br>
-                <input type="file" id="fotograf_yukle" name="fotograf_yukle" accept="image/*" required>
+                <input type="file" id="fotograf_yukle" name="fotograf_yukle" accept="image/*" required> 
             </div>
             <br>
             <div>
                 <button type="submit">Fotoğrafı Yükle ve Hediyeyi Al</button>
             </div>
-
         </form>
+
+        <div id="success-message">
+            <strong>Teşekkürler!</strong><br>
+            Katılım bilgileriniz ve fotoğrafınız başarıyla alınmıştır. (Bu mesaj sadece bir onaydır, veriler henüz işlenmemiştir).
+        </div>
+        
         <br>
         <a href="index.html">Anasayfaya Dön</a>
     </main>
@@ -39,6 +56,17 @@
     <footer>
         <p>© 2025 Kyrosil Kampanyası</p>
     </footer>
+
+    <script>
+        const form = document.getElementById('upload-form');
+        const successMessage = document.getElementById('success-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            successMessage.style.display = 'block';
+            form.style.display = 'none'; 
+        });
+    </script>
 
 </body>
 </html>
